@@ -25,6 +25,7 @@ Start of with the following HTML:
       <input type="number" class="height" />
     </label>
     <button id="randomize">Get random image!</button>
+    
   </div>
 
   <div class="image"></div>

@@ -1,4 +1,4 @@
-//Arial, sans-serif
+// this is Js file for About_Me  .
 
 // Change the font-family 
 let fontPage = document.querySelector('body');

@@ -1,36 +1,42 @@
-// let books = [
-//   {
-//     title: "The Design of Everyday Things",
-//     author: "Don Norman",
-//     alreadyRead: false
-//   },
-//   {
-//     title: "The Most Human Human",
-//     author: "Brian Christian",
-//     alreadyRead: true
-//   },
-//   {
-//     title: "In Search of Lost Time",
-//     author: "Marcel Proust",
-//     alreadyRead: true
-//   },
-//   {
-//     title: "Ulysses",
-//     author: "James Joyce",
-//     alreadyRead: true
-//   },
-//   {
-//     title: "The Great Gatsby",
-//     author: "F. Scott Fitzgerald",
-//     alreadyRead: true
-//   }
-// ];
+let books = [
+  {
+    title: "The Design of Everyday Things",
+    author: "Don Norman",
+    alreadyRead: false
+  },
+  {
+    title: "The Most Human Human",
+    author: "Brian Christian",
+    alreadyRead: true
+  },
+  {
+    title: "In Search of Lost Time",
+    author: "Marcel Proust",
+    alreadyRead: true
+  },
+  {
+    title: "Ulysses",
+    author: "James Joyce",
+    alreadyRead: true
+  },
+  {
+    title: "The Great Gatsby",
+    author: "F. Scott Fitzgerald",
+    alreadyRead: true
+  }
+];
 
+//1 answer
+const newh1 = document.createElement("h1");
 
-// for (let i = 0; i < books.length; i++) {
-//  const currentListItems = allListItem[i];
+const newh1Div = document.querySelector(".favoriteBooks");
 
-//    console.log(currentListItems);
-//   }
+newh1Div.appendChild(newh1);
 
-//   console.log("Ending loop...");
+// 2 Answer
+for (let i = 0; i < books.length; i++) {
+  console.log(books[i].title);
+  const newp = document.createElement("p");
+  newh1Div.appendChild(newp);
+  newp.innerHTML = books[i].title + ", by " + books[i].author;
+}

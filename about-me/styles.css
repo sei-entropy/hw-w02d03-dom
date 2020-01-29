@@ -1,0 +1,10 @@
+img {
+    width: 200px;
+    height: auto;
+    margin: 20px;
+    display: block;
+}
+
+.favoriteBooks li {
+    margin-top: 50px;
+}

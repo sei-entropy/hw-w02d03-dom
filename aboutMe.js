@@ -50,9 +50,9 @@ var books = [
   const divfavoriteBooks=document.querySelector('.favoriteBooks');
   divfavoriteBooks.appendChild(heading);
   for (let i = 0; i < books.length; i++) {
-    const currentBook = books[i];
 
      const paragraph = document.createElement('p');
-    paragraph.innerText = `${currentBook.title}, by ${currentBook.author}`;
-
+    paragraph.innerText = books[i].title+'by '+books[i].author;
+    document.querySelector('.favoriteBooks').appendChild(paragraph);
+    
   }

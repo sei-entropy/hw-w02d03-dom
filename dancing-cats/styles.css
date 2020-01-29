@@ -1,0 +1,17 @@
+button {
+    position: absolute;
+    bottom: 200px;
+    left: 550px;
+    background-color: grey;
+    color: #ffffff;
+    font-size: larger;
+}
+
+
+.flip-right{
+    transform: none;
+}
+
+.flip-left {
+    transform: scaleX(-1);
+}

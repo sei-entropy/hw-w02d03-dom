@@ -28,7 +28,7 @@ Start of with the following HTML:
   </div>
 
   <div class="image"></div>
-
+  <script src="randomImg.js"></script>
 </body>
 
 </html>

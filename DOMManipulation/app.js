@@ -59,12 +59,11 @@ const newImage = document.createElement('img');
   heading.innerText= "My Book List";
   document.querySelector('.favoriteBooks').appendChild(heading);
 
-  for (let i=0, i< books.length, i++){
-    const paragraph = document.createElement('p');
-    if (books[i].alreadyRead= true || false){
-      return(title+', by '+author);
-      append();
+  
+  for (let i=0; i< books.length; i++){
+    const paragraph = document.createElement('p')
+    paragraph.innerText= (books[i].title+', by '+ books[i].author);
+      heading.append(paragraph);
   }
 
 
-   

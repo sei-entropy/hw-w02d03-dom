@@ -1,80 +1,62 @@
-document.body.style.fontFamily = "Arial, sans-serif";
+const fontF = document.querySelector('body');
+fontF.style.fontFamily = 'Arial, sans-serif';
 
-document.querySelector("#nickname").innerHTML = "Obaid Alqahtani";
-document.querySelector("#favorite").innerHTML = "Cyber";
-document.querySelector('#hometown').innerHTML = "Al-rain"
-const liArr = document.querySelectorAll('li');
-for (let i = 0; i < liArr.length; i++) {
+const nickN = document.querySelector('span#nickname');
+nickN.innerText = 'Ranen Khlabi';
 
-    liArr[i].className = 'listitem';
-    liArr[i].style.color = "rebeccapurple";
+const fov = document.querySelector('span#favorite');
+fov.innerText = 'Cat';
+
+const homeT = document.querySelector('span#hometown');
+homeT.innerText = 'Tabuk';
+
+const list = document.querySelectorAll('li');
+for (let i =0;i<list.length;i++){
+    list[i].setAttribute('class','listitem')
+    list[i].style.color ='rebeccapurple';
 }
-const newImg = document.createElement('img');
-newImg.setAttribute("src", "http://2.bp.blogspot.com/-QJw5M-81u3E/Ts2-7UWNu_I/AAAAAAABuhA/rzVspDG1Hc4/s1600/funny%2Bhorse%2Bpictures%2Bfree%2B%252848%2529.jpg")
 
-const div = document.querySelector(".profilePicture");
+const newImg =document.querySelector('div.profilePicture');
 
-div.append(newImg);
+const img = document.createElement('img');
+img.setAttribute('src','https://webcomicms.net/sites/default/files/clipart/175033/free-pictures-sun-175033-7616602.jpg');
+newImg.appendChild(img);
 
+//////////Book List
 
 var books = [
     {
-        title: "The Design of Everyday Things",
-        author: "Don Norman",
-        alreadyRead: false
+      title: "The Design of Everyday Things",
+      author: "Don Norman",
+      alreadyRead: false
     },
     {
-        title: "The Most Human Human",
-        author: "Brian Christian",
-        alreadyRead: true
+      title: "The Most Human Human",
+      author: "Brian Christian",
+      alreadyRead: true
     },
     {
-        title: "In Search of Lost Time",
-        author: "Marcel Proust",
-        alreadyRead: true
+      title: "In Search of Lost Time",
+      author: "Marcel Proust",
+      alreadyRead: true
     },
     {
-        title: "Ulysses",
-        author: "James Joyce",
-        alreadyRead: true
+      title: "Ulysses",
+      author: "James Joyce",
+      alreadyRead: true
     },
     {
-        title: "The Great Gatsby",
-        author: "F. Scott Fitzgerald",
-        alreadyRead: true
+      title: "The Great Gatsby",
+      author: "F. Scott Fitzgerald",
+      alreadyRead: true
     }
-];
+  ];
 
-//   const newHeader = document.createElement('h1');
-//   newHeader.innerText ="My Book List";
-// const divBook = document.querySelector(".favoriteBooks");
-// divBook.append(newHeader);
+  const newH1 =document.querySelector('div.favoriteBooks');
+  const H1s =document.createElement('h1');
+  H1s.innerText= 'My Book List';
+  newH1.appendChild(H1s);
 
-
-const divBook = document.createElement('h1');
-divBook.innerText = "My Book List";
-
-const favBooks = document.querySelector('div.favoriteBooks')
-favBooks.appendChild(divBook)
-
-
-
-
-const ulBooks = document.createElement('ul');
-for (const bookLists of books) {
-    const pTag = document.createElement('p');
-    const listTag = document.createElement('li');
-    pTag.innerText = `${bookLists.title}, by ${bookLists.author}`;
-
-    pTag.innerText = ""
-
-    if (bookLists.alreadyRead) {
-        pTag.style.color = 'red'
-    }
-
-
-    listTag.append(pTag);
-    ulBooks.append(listTag);
-}
-
-favBooks.append(ulBooks);
+  for(let i =0; books.length;i++){
+    document.querySelector(".favoriteBooks").innerHTML+='<p>'+books[i].title + ' ' + books[i].author + ' </p>';
+} 

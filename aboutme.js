@@ -1,3 +1,4 @@
+//1
 var body =document.querySelector("body");
 var curreentstyle = getComputedStyle(body);
 var fontsize=curreentstyle.fontFamily;
@@ -35,28 +36,62 @@ var changColor2 =document.querySelector(".listitem2");
 var curreentstyle= getComputedStyle(changColor2);
 var fonttextColor2=curreentstyle.color;
 changColor2.style.color="rebeccapurple";
-
 //4
-//var img =document.createElement(".profilePicture");
-//var img =document.querySelector(".profilePicture");
-/*var elem = document.createElement("img");
-elem.setAttribute("height", "768");
-elem.setAttribute("width", "1024");
-elem.setAttribute("alt", "profilepic");
-img.setAttribute("src", "https://i1.wp.com/lubnah.me.ke/wp-content/uploads/2019/11/5781665-huzur-shif-hijab-drawing-hijab-cartoon-anime-muslimah-cartoon-hijab-860_1000.jpg?zoom=2&fit=860%2C1000&ssl=1");
-document.body.appendChild(elem);*/
-
-/*var img = document.createElement('img'); 
-img.src =  
-'https://media.geeksforgeeks.org/wp-content/uploads/20190529122828/bs21.png'; 
-document.getElementById('.profilePicture').appendChild(img); */
-
 var elem = document.createElement("img");
-elem.setAttribute("src", "https://www.placecage.com/300/300");
-elem.setAttribute("height", "40");
-elem.setAttribute("width", "120");
+var pic = document.querySelector("div.favoriteBooks");
+elem.setAttribute("src", "https://img.icons8.com/dotty/80/000000/user-female-circle.png");
+elem.setAttribute("height", "200");
+elem.setAttribute("width", "200");
 elem.setAttribute("alt", "profile");
-document.body.appendChild(elem);
+list.appendChild(elem);
+
+
+
+var books = [
+    {
+      title: "The Design of Everyday Things",
+      author: "Don Norman",
+      alreadyRead: false
+    },
+    {
+      title: "The Most Human Human",
+      author: "Brian Christian",
+      alreadyRead: true
+    },
+    {
+      title: "In Search of Lost Time",
+      author: "Marcel Proust",
+      alreadyRead: true
+    },
+    {
+      title: "Ulysses",
+      author: "James Joyce",
+      alreadyRead: true
+    },
+    {
+      title: "The Great Gatsby",
+      author: "F. Scott Fitzgerald",
+      alreadyRead: true
+    }
+  ];
+  
+  //5
+  var heading1 = document.querySelector("div.favoriteBooks");
+  var currentHTML1 = heading1.innerHTML;
+  heading1.innerHTML="<div></div>";
+  heading1.innerHTML="My Book List ";
+
+//6
+  for (let i=0 ; i<books.length; i++){
+ const theBooks= document.createElement('p');
+
+ theBooks.innerText=books[i].title +' by '+books[i].author;
+ heading1.appendChild(theBooks);
+
+  }
+
+
+  
 
 
 

@@ -75,7 +75,7 @@ tital.appendChild(theTital);
     
     for (let i=0 ; i<books.length; i++){
         const bookPargraph = document.createElement("p");
-        bookPargraph.innerText=books.title+"by"+books.author
+        bookPargraph.innerText=books[i].title+" by "+books[i].author
         const add = document.querySelector("div.favoriteBooks");
         add.appendChild(bookPargraph)
 

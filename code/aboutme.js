@@ -61,8 +61,11 @@ var books = [
   h1Targit.appendChild(newH1);
 //pragraph
 for(let i=0;i<books.length;i++){
+
 const newPragraph =document.createElement('p');
-newPragraph.innerText=books[i];
+newPragraph.innerText=books[i].title+'by :'+books[i].author+'Is it Readed :'+books[i].alreadyRead;
+
+
 
 pragraphTargit =document.querySelector('div.favoriteBooks');
 pragraphTargit.appendChild(newPragraph);
